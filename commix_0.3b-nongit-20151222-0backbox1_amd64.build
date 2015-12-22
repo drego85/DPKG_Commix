@@ -1,0 +1,167 @@
+ dpkg-buildpackage -rfakeroot -d -us -uc
+dpkg-buildpackage: Pacchetto sorgente commix
+dpkg-buildpackage: Versione sorgente 0.3b-nongit-20151222-0backbox1
+dpkg-buildpackage: Distribuzione sorgente trusty
+dpkg-buildpackage: Sorgente modificata da Andrea Draghetti <andrea@backbox.org>
+ dpkg-source --before-build commix_0.3b-nongit-20151222
+dpkg-buildpackage: Architettura host amd64
+ fakeroot debian/rules clean
+dh clean --with=python2
+   dh_testdir
+   dh_auto_clean
+   dh_clean
+	rm -f debian/commix.substvars
+	rm -f debian/commix.*.debhelper
+	rm -rf debian/commix/
+	rm -f debian/*.debhelper.log
+	rm -f debian/files
+	find .  \( \( -type f -a \
+	        \( -name '#*#' -o -name '.*~' -o -name '*~' -o -name DEADJOE \
+		 -o -name '*.orig' -o -name '*.rej' -o -name '*.bak' \
+		 -o -name '.*.orig' -o -name .*.rej -o -name '.SUMS' \
+		 -o -name TAGS -o \( -path '*/.deps/*' -a -name '*.P' \) \
+		\) -exec rm -f {} + \) -o \
+		\( -type d -a -name autom4te.cache -prune -exec rm -rf {} + \) \)
+	rm -f *-stamp
+ dpkg-source -b commix_0.3b-nongit-20151222
+dpkg-source: Informazioni: using source format `3.0 (quilt)'
+dpkg-source: Informazioni: building commix using existing ./commix_0.3b-nongit-20151222.orig.tar.gz
+tar: Rimozione di "/" iniziale dai nomi dei membri
+dpkg-source: Errore: cannot represent change to src/__init__.pyc: binary file contents changed
+dpkg-source: Errore: add src/__init__.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/__init__.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/__init__.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/__init__.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/__init__.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/blind/__init__.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/blind/__init__.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/blind/techniques/__init__.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/blind/techniques/__init__.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/blind/techniques/time_based/__init__.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/blind/techniques/time_based/__init__.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/blind/techniques/time_based/tb_enumeration.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/blind/techniques/time_based/tb_enumeration.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/blind/techniques/time_based/tb_file_access.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/blind/techniques/time_based/tb_file_access.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/blind/techniques/time_based/tb_handler.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/blind/techniques/time_based/tb_handler.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/blind/techniques/time_based/tb_injector.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/blind/techniques/time_based/tb_injector.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/blind/techniques/time_based/tb_payloads.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/blind/techniques/time_based/tb_payloads.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/controller/__init__.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/controller/__init__.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/controller/checks.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/controller/checks.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/controller/controller.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/controller/controller.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/results_based/__init__.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/results_based/__init__.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/results_based/techniques/__init__.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/results_based/techniques/__init__.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/results_based/techniques/classic/__init__.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/results_based/techniques/classic/__init__.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/results_based/techniques/classic/cb_enumeration.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/results_based/techniques/classic/cb_enumeration.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/results_based/techniques/classic/cb_file_access.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/results_based/techniques/classic/cb_file_access.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/results_based/techniques/classic/cb_handler.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/results_based/techniques/classic/cb_handler.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/results_based/techniques/classic/cb_injector.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/results_based/techniques/classic/cb_injector.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/results_based/techniques/classic/cb_payloads.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/results_based/techniques/classic/cb_payloads.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/results_based/techniques/eval_based/__init__.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/results_based/techniques/eval_based/__init__.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/results_based/techniques/eval_based/eb_enumeration.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/results_based/techniques/eval_based/eb_enumeration.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/results_based/techniques/eval_based/eb_file_access.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/results_based/techniques/eval_based/eb_file_access.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/results_based/techniques/eval_based/eb_handler.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/results_based/techniques/eval_based/eb_handler.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/results_based/techniques/eval_based/eb_injector.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/results_based/techniques/eval_based/eb_injector.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/results_based/techniques/eval_based/eb_payloads.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/results_based/techniques/eval_based/eb_payloads.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/semiblind/__init__.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/semiblind/__init__.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/semiblind/techniques/__init__.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/semiblind/techniques/__init__.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/semiblind/techniques/file_based/__init__.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/semiblind/techniques/file_based/__init__.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/semiblind/techniques/file_based/fb_enumeration.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/semiblind/techniques/file_based/fb_enumeration.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/semiblind/techniques/file_based/fb_file_access.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/semiblind/techniques/file_based/fb_file_access.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/semiblind/techniques/file_based/fb_handler.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/semiblind/techniques/file_based/fb_handler.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/semiblind/techniques/file_based/fb_injector.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/semiblind/techniques/file_based/fb_injector.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/semiblind/techniques/file_based/fb_payloads.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/semiblind/techniques/file_based/fb_payloads.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/semiblind/techniques/tempfile_based/__init__.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/semiblind/techniques/tempfile_based/__init__.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/semiblind/techniques/tempfile_based/tfb_enumeration.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/semiblind/techniques/tempfile_based/tfb_enumeration.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/semiblind/techniques/tempfile_based/tfb_file_access.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/semiblind/techniques/tempfile_based/tfb_file_access.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/semiblind/techniques/tempfile_based/tfb_handler.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/semiblind/techniques/tempfile_based/tfb_handler.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/semiblind/techniques/tempfile_based/tfb_injector.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/semiblind/techniques/tempfile_based/tfb_injector.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/injections/semiblind/techniques/tempfile_based/tfb_payloads.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/injections/semiblind/techniques/tempfile_based/tfb_payloads.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/modules/__init__.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/modules/__init__.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/modules/modules_handler.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/modules/modules_handler.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/requests/__init__.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/requests/__init__.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/requests/authentication.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/requests/authentication.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/requests/headers.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/requests/headers.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/requests/parameters.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/requests/parameters.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/requests/proxy.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/requests/proxy.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/requests/requests.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/requests/requests.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/requests/tor.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/requests/tor.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/shells/__init__.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/shells/__init__.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/core/shells/reverse_tcp.pyc: binary file contents changed
+dpkg-source: Errore: add src/core/shells/reverse_tcp.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/thirdparty/__init__.pyc: binary file contents changed
+dpkg-source: Errore: add src/thirdparty/__init__.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/thirdparty/colorama/__init__.pyc: binary file contents changed
+dpkg-source: Errore: add src/thirdparty/colorama/__init__.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/thirdparty/colorama/ansi.pyc: binary file contents changed
+dpkg-source: Errore: add src/thirdparty/colorama/ansi.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/thirdparty/colorama/ansitowin32.pyc: binary file contents changed
+dpkg-source: Errore: add src/thirdparty/colorama/ansitowin32.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/thirdparty/colorama/initialise.pyc: binary file contents changed
+dpkg-source: Errore: add src/thirdparty/colorama/initialise.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/thirdparty/colorama/win32.pyc: binary file contents changed
+dpkg-source: Errore: add src/thirdparty/colorama/win32.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/thirdparty/colorama/winterm.pyc: binary file contents changed
+dpkg-source: Errore: add src/thirdparty/colorama/winterm.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/utils/__init__.pyc: binary file contents changed
+dpkg-source: Errore: add src/utils/__init__.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/utils/install.pyc: binary file contents changed
+dpkg-source: Errore: add src/utils/install.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/utils/logs.pyc: binary file contents changed
+dpkg-source: Errore: add src/utils/logs.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/utils/menu.pyc: binary file contents changed
+dpkg-source: Errore: add src/utils/menu.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/utils/requirments.pyc: binary file contents changed
+dpkg-source: Errore: add src/utils/requirments.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/utils/settings.pyc: binary file contents changed
+dpkg-source: Errore: add src/utils/settings.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/utils/update.pyc: binary file contents changed
+dpkg-source: Errore: add src/utils/update.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: cannot represent change to src/utils/version.pyc: binary file contents changed
+dpkg-source: Errore: add src/utils/version.pyc in debian/source/include-binaries if you want to store the modified binary in the debian tarball
+dpkg-source: Errore: unrepresentable changes to source
+dpkg-buildpackage: Errore: dpkg-source -b commix_0.3b-nongit-20151222 gave error exit status 2
